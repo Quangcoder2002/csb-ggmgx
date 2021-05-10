@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body * {
+        border: 1px solid black;
+        margin: 12px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <p>sdasda</p>
+    <div>
+      div
+      <ul>
+        ul
+        <li>
+          li <br />
+          <span>
+            thẻ span
+          </span>
+        </li>
+        <li>
+          thẻ li
+          <br />
+          <b>
+            thẻ b
+          </b>
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(document).ready(function () {
+        //$("span").parent().css({ "border-color": "red" });
+        //$("span").parents("ul").css({ "border-color": "red" });
+        $("span").parentsUntil("body").css({ "border-color": "red" });
+      });
+    </script>
   </body>
 </html>
