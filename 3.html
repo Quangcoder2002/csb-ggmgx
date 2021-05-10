@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=p, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum aut
+      sunt obcaecati tempora eum aspernatur, dignissimos porro illo ut laborum
+      similique aliquam quas non doloremque nostrum laboriosam? Deleniti, ipsam.
+    </p>
+    <button>show</button>
+    <button>hide</button>
+    <button>toggle</button>
+    <button>slideUp</button>
+    <button>SlideDown</button>
+    <button>SlideToggle</button>
+    <script>
+      $(document).ready(function () {
+        $("button")
+          .eq(0)
+          .on("click", function () {
+            $("p").show(3000);
+          });
+        $("button")
+          .eq(1)
+          .on("click", function () {
+            $("p").hide();
+          });
+        $("button")
+          .eq(2)
+          .on("click", function () {
+            $("p").toggle();
+          });
+        $("button")
+          .eq(3)
+          .on("click", function () {
+            $("p").slideUp();
+          });
+        $("button")
+          .eq(4)
+          .on("click", function () {
+            $("p").slideDown();
+          });
+        $("button")
+          .eq(5)
+          .on("click", function () {
+            $("p").slideToggle();
+          });
+      });
+    </script>
+  </body>
+</html>
